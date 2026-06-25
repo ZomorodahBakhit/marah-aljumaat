@@ -1,0 +1,33 @@
+# -------------------------------------------------------
+# .gitignore for C# / .NET projects
+# At the ROOT of the repo, this applies to every project
+# in every subfolder (week1/day1, week2/day3, etc.).
+# -------------------------------------------------------
+
+# Build output -- auto-generated every build, never commit
+bin/
+obj/
+
+# Visual Studio local cache & user settings
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+
+# Build configs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# NuGet
+*.nupkg
+packages/
+
+# OS junk
+.DS_Store
+Thumbs.db
