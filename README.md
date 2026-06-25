@@ -12,9 +12,9 @@ The folders are already created for you:
 - Week 1 starts Monday (Sunday was orientation), so it has day1-day4.
 - Week 2 runs Sunday-Thursday, so it has day1-day5.
 
-## How to submit â€” pick whichever is easier
+## How to submit Ã¢â‚¬â€ pick whichever is easier
 
-### Option A â€” Upload through the browser (simplest)
+### Option A Ã¢â‚¬â€ Upload through the browser (simplest)
 1. Open this repo on github.com.
 2. Click into the folder for today (e.g. week1 -> day1).
 3. Click "Add file" -> "Upload files".
@@ -23,7 +23,7 @@ The folders are already created for you:
 
 That's it. The time you commit is your submission time.
 
-### Option B â€” Clone and push from your computer
+### Option B Ã¢â‚¬â€ Clone and push from your computer
 If you are comfortable with git:
 
     git clone https://github.com/ZomorodahBakhit/marah-aljumaat.git
@@ -44,3 +44,23 @@ Sunday. After the deadline it is marked late automatically.
 Homework here; attendance through the daily Google Form. Do both every day.
 
 Don't rename or delete the day folders, and don't force-push over history.
+
+---
+
+## Keeping your repo clean (build artifacts)
+
+This repo now has a `.gitignore` at the root. It tells git to ignore the folders
+your computer auto-generates (`bin/`, `obj/`, `.vs/`). Don't delete it.
+
+A correct homework commit is a handful of `.cs` and project files. Before every
+commit, run `git status` -- if you see `bin/`, `obj/`, `.vs/`, or `.dll` files,
+STOP, something is wrong.
+
+If you already committed those folders, untrack them once:
+
+    git rm -r --cached bin obj .vs
+    git commit -m "Remove build artifacts"
+    git push
+
+Never commit: `bin/`  `obj/`  `.vs/`  `*.user` -- they're machine-specific and
+regenerated every build.
