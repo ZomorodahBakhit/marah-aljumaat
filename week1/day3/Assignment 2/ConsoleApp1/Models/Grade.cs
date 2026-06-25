@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityDB2.Models
 {
-    internal class Grade
+    public class Grade
     {
         public int GradeId { get; set; }
         public int GradeNumber { get; set; }

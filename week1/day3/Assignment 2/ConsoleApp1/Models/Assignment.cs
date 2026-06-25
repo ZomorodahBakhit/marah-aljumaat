@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityDB2.Models
 {
-    internal class Assignment
+    public class Assignment
     {
         public int AssignmentId { get; set; }
         public string AssignmentTitle { get; set; }

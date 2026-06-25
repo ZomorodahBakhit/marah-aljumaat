@@ -21,7 +21,7 @@ namespace UniversityDB2.ClassMapping
 
             // Properties
             builder.Property(x => x.GradeNumber)
-                   .IsRequired(false);
+                   .IsRequired();
                   
             // Relationships
             builder.HasOne(g => g.Student)

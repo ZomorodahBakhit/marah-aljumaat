@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityDB2.Models
 {
-    internal class Comment
+    public class Comment
     {
         public int CommentId { get; set; }
         public DateTime CreatedDate { get; set; }
