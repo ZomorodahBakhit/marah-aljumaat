@@ -1,0 +1,325 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\university2dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\university2dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\migrations\\20260625083430_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\migrations\\20260625083430_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\migrations\\university2dbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\migrations\\university2dbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\20260625082146_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConsoleApp1\\Migrations\\20260625082146_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\gradeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\gradeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\assignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\assignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\courseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\courseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\syllabusconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\syllabusconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\classmapping\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\classmapping\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\syllabus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\syllabus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|c:\\users\\marah\\onedrive\\desktop\\marah-aljumaat\\week1\\day3\\assignment 2\\consoleapp1\\universitydb2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D42B3856-2A1D-D35B-448F-A926EC17E61E}|ConsoleApp1\\UniversityDB2.csproj|solutionrelative:consoleapp1\\universitydb2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "University2DbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\University2DbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Migrations\\University2DbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\University2DbContextModelSnapshot.cs",
+              "RelativeToolTip": "ConsoleApp1\\Migrations\\University2DbContextModelSnapshot.cs",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAowDkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T08:34:37.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260625083430_migration1.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\20260625083430_migration1.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Migrations\\20260625083430_migration1.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\20260625083430_migration1.cs",
+              "RelativeToolTip": "ConsoleApp1\\Migrations\\20260625083430_migration1.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAkwNoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T08:34:31.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260625082146_migration1.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\20260625082146_migration1.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Migrations\\20260625082146_migration1.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Migrations\\20260625082146_migration1.cs",
+              "RelativeToolTip": "ConsoleApp1\\Migrations\\20260625082146_migration1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T08:21:47.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssignmentConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\AssignmentConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\AssignmentConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\AssignmentConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\AssignmentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:26:13.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "University2DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\University2DbContext.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\University2DbContext.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\University2DbContext.cs",
+              "RelativeToolTip": "ConsoleApp1\\University2DbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:12:12.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CommentConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\CommentConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\CommentConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\CommentConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\CommentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:26:32.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T13:58:50.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Grade.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Grade.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Grade.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Grade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:06:59.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GradeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\GradeConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\GradeConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\GradeConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\GradeConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:27:20.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CourseConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\CourseConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\CourseConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\CourseConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\CourseConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:26:55.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SyllabusConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\SyllabusConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\SyllabusConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\SyllabusConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\SyllabusConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:27:44.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ClassMapping\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\ClassMapping\\UserConfiguration.cs",
+              "RelativeToolTip": "ConsoleApp1\\ClassMapping\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T06:25:44.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Assignment.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Assignment.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Assignment.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Assignment.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Assignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:06:17.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Comment.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:06:47.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Course.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:05:56.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Syllabus.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Syllabus.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Syllabus.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\Syllabus.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Syllabus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:07:15.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\Models\\User.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T05:05:31.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UniversityDB2.csproj",
+              "DocumentMoniker": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\UniversityDB2.csproj",
+              "RelativeDocumentMoniker": "ConsoleApp1\\UniversityDB2.csproj",
+              "ToolTip": "C:\\Users\\marah\\OneDrive\\Desktop\\marah-aljumaat\\week1\\day3\\Assignment 2\\ConsoleApp1\\UniversityDB2.csproj",
+              "RelativeToolTip": "ConsoleApp1\\UniversityDB2.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-25T05:10:15.702Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
