@@ -16,7 +16,7 @@ namespace UniversityDB2.Models
         // relationships (M:1 course, 1:M comments, 1:M grade)
         public int CourseId { get; set; } // FK we put the FK here BC assignment is the dependent entity
         public Course Course { get; set; }
-        ICollection<Comment> Comments { get; set; } // one-to-many relationship with Comment
-        ICollection<Grade> Grades { get; set; } // one-to-many relationship with Grade
+        public ICollection<Comment> Comments { get; set; } // one-to-many relationship with Comment
+        public ICollection<Grade> Grades { get; set; } // one-to-many relationship with Grade
     }
 }
