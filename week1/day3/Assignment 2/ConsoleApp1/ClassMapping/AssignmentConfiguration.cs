@@ -41,15 +41,18 @@ namespace UniversityDB2.ClassMapping
             // Relationships
             builder.HasOne(a => a.Course)
                     .WithMany(c => c.Assignments)
-                    .HasForeignKey(a => a.CourseId);
+                    .HasForeignKey(a => a.CourseId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasMany(a => a.Comments)
-                    .WithOne(c => c.Assignment)
-                    .HasForeignKey(c => c.AssignmentId);
+            //written in comment configuration
+            //builder.HasMany(a => a.Comments)
+            //        .WithOne(c => c.Assignment)
+            //        .HasForeignKey(c => c.AssignmentId);
 
-            builder.HasMany(a=>a.Grades)
-                .WithOne(g=>g.Assignment)
-                .HasForeignKey(g => g.AssignmentId);
+            //written in grade configuration
+            ////builder.HasMany(a=>a.Grades)
+            ////    .WithOne(g=>g.Assignment)
+            ////    .HasForeignKey(g => g.AssignmentId);
 
         }
     }

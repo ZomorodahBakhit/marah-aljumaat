@@ -31,17 +31,20 @@ namespace UniversityDB2.ClassMapping
                    .IsRequired();
 
             // Relationships
-            builder.HasOne(co => co.Syllabus)
-                    .WithOne(s => s.Course)
-                    .HasForeignKey<Syllabus>(s => s.CourseId);
+            //written in syllabus configuration
+            //builder.HasOne(co => co.Syllabus)
+            //        .WithOne(s => s.Course)
+            //        .HasForeignKey<Syllabus>(s => s.CourseId);
 
             builder.HasOne(co => co.Teacher)
                     .WithMany(u => u.Courses)
-                    .HasForeignKey(co => co.TeacherId);
-
-            builder.HasMany(co => co.Assignments)
-                    .WithOne(a => a.Course)
-                    .HasForeignKey(a => a.CourseId);
+                    .HasForeignKey(co => co.TeacherId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            
+            //written in assignment configuration
+            //builder.HasMany(co => co.Assignments)
+            //        .WithOne(a => a.Course)
+            //        .HasForeignKey(a => a.CourseId);
 
         }
     }

@@ -48,17 +48,20 @@ namespace UniversityDB2.ClassMapping
                    .HasMaxLength(32);
 
             // Relationships
-            builder.HasMany(u => u.Comments)
-                .WithOne(c => c.User)
-                .HasForeignKey(c => c.UserId);
-            
-            builder.HasMany(u=>u.Courses)
-                .WithOne(co=>co.Teacher)
-                .HasForeignKey(co => co.TeacherId);
+            //written in commentConfig
+            //builder.HasMany(u => u.Comments)
+            //    .WithOne(c => c.User)
+            //    .HasForeignKey(c => c.UserId);
 
-            builder.HasMany(u => u.Grades)
-                .WithOne(g => g.Student)
-                .HasForeignKey(g => g.StudentId);
+            //written in courseConfig
+            //builder.HasMany(u=>u.Courses)
+            //    .WithOne(co=>co.Teacher)
+            //    .HasForeignKey(co => co.TeacherId);
+
+            //written in gradeConfig
+            //builder.HasMany(u => u.Grades)
+            //    .WithOne(g => g.Student)
+            //    .HasForeignKey(g => g.StudentId);
         }
     }
 }

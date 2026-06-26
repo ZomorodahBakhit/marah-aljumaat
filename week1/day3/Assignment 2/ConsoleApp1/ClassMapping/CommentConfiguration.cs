@@ -31,11 +31,13 @@ namespace UniversityDB2.ClassMapping
             // Relationships
             builder.HasOne(c => c.User)
                     .WithMany(u => u.Comments)
-                    .HasForeignKey(c => c.UserId);
+                    .HasForeignKey(c => c.UserId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(c => c.Assignment)
                     .WithMany(a => a.Comments)
-                    .HasForeignKey(c => c.AssignmentId);
+                    .HasForeignKey(c => c.AssignmentId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

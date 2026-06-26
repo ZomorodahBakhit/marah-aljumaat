@@ -28,7 +28,9 @@ namespace UniversityDB2.ClassMapping
             // Relationships
             builder.HasOne(s => s.Course)
                     .WithOne(c => c.Syllabus)
-                    .HasForeignKey<Syllabus>(s => s.CourseId);
+                    .HasForeignKey<Syllabus>(s => s.CourseId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
 
 
 

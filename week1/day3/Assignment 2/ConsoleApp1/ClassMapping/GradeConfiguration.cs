@@ -26,11 +26,14 @@ namespace UniversityDB2.ClassMapping
             // Relationships
             builder.HasOne(g => g.Student)
                     .WithMany(s => s.Grades)
-                    .HasForeignKey(g => g.StudentId);
+                    .HasForeignKey(g => g.StudentId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            
 
             builder.HasOne(g => g.Assignment)
                     .WithMany(a => a.Grades)
-                    .HasForeignKey(g => g.AssignmentId);
+                    .HasForeignKey(g => g.AssignmentId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

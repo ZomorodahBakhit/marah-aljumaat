@@ -12,7 +12,7 @@ using UniversityDB2;
 namespace UniversityDB2.Migrations
 {
     [DbContext(typeof(University2DbContext))]
-    [Migration("20260625083430_migration1")]
+    [Migration("20260626205242_migration1")]
     partial class migration1
     {
         /// <inheritdoc />
@@ -111,7 +111,7 @@ namespace UniversityDB2.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
                         .HasColumnType("int");
 
                     b.HasKey("CourseId");
@@ -155,7 +155,7 @@ namespace UniversityDB2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SyllabusId"));
 
-                    b.Property<int>("CourseId")
+                    b.Property<int?>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<string>("SyllabusDescription")
@@ -165,7 +165,8 @@ namespace UniversityDB2.Migrations
                     b.HasKey("SyllabusId");
 
                     b.HasIndex("CourseId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[CourseId] IS NOT NULL");
 
                     b.ToTable("Syllabus", (string)null);
                 });
@@ -221,7 +222,7 @@ namespace UniversityDB2.Migrations
                     b.HasOne("UniversityDB2.Models.Course", "Course")
                         .WithMany("Assignments")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -232,13 +233,13 @@ namespace UniversityDB2.Migrations
                     b.HasOne("UniversityDB2.Models.Assignment", "Assignment")
                         .WithMany("Comments")
                         .HasForeignKey("AssignmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("UniversityDB2.Models.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Assignment");
@@ -251,8 +252,7 @@ namespace UniversityDB2.Migrations
                     b.HasOne("UniversityDB2.Models.User", "Teacher")
                         .WithMany("Courses")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Teacher");
                 });
@@ -262,13 +262,13 @@ namespace UniversityDB2.Migrations
                     b.HasOne("UniversityDB2.Models.Assignment", "Assignment")
                         .WithMany("Grades")
                         .HasForeignKey("AssignmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("UniversityDB2.Models.User", "Student")
                         .WithMany("Grades")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Assignment");
@@ -281,8 +281,7 @@ namespace UniversityDB2.Migrations
                     b.HasOne("UniversityDB2.Models.Course", "Course")
                         .WithOne("Syllabus")
                         .HasForeignKey("UniversityDB2.Models.Syllabus", "CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Course");
                 });
@@ -298,8 +297,7 @@ namespace UniversityDB2.Migrations
                 {
                     b.Navigation("Assignments");
 
-                    b.Navigation("Syllabus")
-                        .IsRequired();
+                    b.Navigation("Syllabus");
                 });
 
             modelBuilder.Entity("UniversityDB2.Models.User", b =>
