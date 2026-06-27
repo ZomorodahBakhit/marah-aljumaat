@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using UniversityDB2;
 using UniversityDB2.Models;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -199,28 +200,28 @@ foreach (var course in coursesList)
 
 //Show all assignments for a specific course
 var assignmentsForCourse = db.Assignments.Where(a => a.CourseId == 1).ToList();
-foreach(var assignment in assignmentsForCourse)
+foreach (var assignment in assignmentsForCourse)
 {
     Console.WriteLine($"Assignment ID: {assignment.AssignmentId}, Title: {assignment.AssignmentTitle}, CourseId: {assignment.CourseId}");
 }
 
 //List all students
 var studentList = db.Users.Where(s => s.Role == "Student").ToList();
-foreach(var student in studentList)
+foreach (var student in studentList)
 {
     Console.WriteLine($"Student ID: {student.UserId}, Name: {student.FirstName} {student.LastName}");
 }
 
 //Show all comments for a given assignment
 var commentsForAssignment = db.Comments.Where(c => c.AssignmentId == 1).ToList();
-foreach(var comment in commentsForAssignment)
+foreach (var comment in commentsForAssignment)
 {
     Console.WriteLine($"Comment: {comment.CommentContent}, AssignmentId: {comment.AssignmentId} ");
 }
 
 //Show all grades for a student
 var gradesForStudent = db.Grades.Where(g => g.StudentId == 1).ToList();
-foreach(var grade in gradesForStudent)
+foreach (var grade in gradesForStudent)
 {
     Console.WriteLine($"StudentId: {grade.StudentId}, Grade: {grade.GradeNumber}, AssignmentId: {grade.AssignmentId}");
 }
@@ -250,10 +251,74 @@ foreach (var avgGrade in averageGradePerCourse)
 }
 
 //Create a method to return letter grades (A, B, C, etc.) based on the student’s performance
+char GradeLetter(int StudentId, int CourseId)
+{
+    // CourseScore = Σ ( (Grade / MaxGrade) × Weight ) 
+    decimal CourseScore = 0;
+    char grdLetter = 'F';
+
+    var studentGradesForCourse = db.Grades
+        .Where(g => g.StudentId == StudentId && g.Assignment.Course.CourseId == CourseId)
+        .Sum(x => ((decimal)x.GradeNumber / x.Assignment.MaxGrade) * x.Assignment.Weight);
+
+    var totalWeight = db.Assignments
+    .Where(a => a.CourseId == CourseId)
+    .Sum(a => a.Weight);
+
+    CourseScore = (studentGradesForCourse / totalWeight) * 100;
+
+    if (CourseScore >= 90) grdLetter = 'A';
+    else if (CourseScore >= 80) grdLetter = 'B';
+    else if (CourseScore >= 70) grdLetter = 'C';
+    else if (CourseScore >= 60) grdLetter = 'D';
+    Console.WriteLine($"StudentId: {StudentId}, CourseId: {CourseId}, CourseScore: {CourseScore}, Letter Grade: {grdLetter}");
+    return grdLetter;
+}
+GradeLetter(3, 1);
 
 
 //Create a method to calculate GPA for a student
+Decimal CalculateGPA(int StudentId)
+{
+    //GPA = [Σ(Point of CourseScore for each course) ] / (Number of Courses)
+    var courseIds = db.Grades
+        .Where(g => g.StudentId == StudentId)
+        .Select(g => g.Assignment.CourseId)
+        .Distinct()
+        .ToList();
 
+    decimal totalPoints = 0;
+
+    foreach (var courseId in courseIds)
+    {
+        char letterGrade = GradeLetter(StudentId, courseId);
+
+        switch (letterGrade)
+        {
+            case 'A':
+                totalPoints += 4.0m;
+                break;
+            case 'B':
+                totalPoints += 3.0m;
+                break;
+            case 'C':
+                totalPoints += 2.0m;
+                break;
+            case 'D':
+                totalPoints += 1.0m;
+                break;
+            default:
+                totalPoints += 0.0m;
+                break;
+        }
+    }
+
+    decimal gpa = courseIds.Count > 0 ? totalPoints / courseIds.Count : 0;
+
+    Console.WriteLine($"StudentId: {StudentId}, GPA: {gpa}");
+    return gpa;
+}
+CalculateGPA(3);
 
 //Updates & Deletions
 //Update a student’s role to “Teacher”
