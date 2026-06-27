@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UniversityDB2;
 using UniversityDB2.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 using var db = new University2DbContext();
@@ -16,7 +17,7 @@ var students = new List<User>
 db.Users.AddRange(students);
 db.SaveChanges();
 
-//Two teachers (Sami, Feryal)
+////Two teachers (Sami, Feryal)
 var teachers = new List<User>
 {
     new User { UserName = "sami123", FirstName = "sami", LastName = "hijazi", EmailAddress = "sami.hijazi@88ninety.com", PhoneNumber = "+1(240) 381 9639", Role = "teacher"},
@@ -25,7 +26,7 @@ var teachers = new List<User>
 db.Users.AddRange(teachers);
 db.SaveChanges();
 
-//At least 5 courses assigned to that teacher (SQL, C#, Entity Framework, Web API and React)
+////At least 5 courses assigned to that teacher (SQL, C#, Entity Framework, Web API and React)
 var courses = new List<Course>
 {
   new Course { CourseName = "SQL", StartDate = new DateTime(2026,06,10), EndDate = new DateTime(2026,06,11), TeacherId = 5 },
@@ -37,7 +38,7 @@ var courses = new List<Course>
 db.Courses.AddRange(courses);
 db.SaveChanges();
 
-//At least 5 assignments per course  (SQL, C#, Entity Framework, Web API and React) with random due dates (past & future).
+////At least 5 assignments per course  (SQL, C#, Entity Framework, Web API and React) with random due dates (past & future).
 var assignments = new List<Assignment>
 {
     new Assignment { AssignmentTitle = "SQL Assignment 1", AssignmentDescription = "SQL Basics", Weight = 10, MaxGrade = 100, DueDate = new DateOnly(2026,06,15), CourseId = 1 },
@@ -75,7 +76,7 @@ db.Assignments.AddRange(assignments);
 db.SaveChanges();
 
 
-//At least 10 comments for random assignments
+////At least 10 comments for random assignments
 var commentsR = new List<Comment>
 {
     new Comment { CreatedDate = new DateTime(2026,07,01) ,CommentContent = "Great work!", UserId = 6 ,AssignmentId = 1 },
@@ -92,7 +93,7 @@ var commentsR = new List<Comment>
 db.Comments.AddRange(commentsR);
 db.SaveChanges();
 
-//A grade for each student per assignment
+////A grade for each student per assignment
 var grades = new List<Grade>
 {
     new Grade { GradeNumber = 85, StudentId = 1, AssignmentId = 1 },
@@ -176,7 +177,7 @@ var grades = new List<Grade>
 db.Grades.AddRange(grades);
 db.SaveChanges();
 
-//A syllabus for each course
+////A syllabus for each course
 var syllabuses = new List<Syllabus>
 {
     new Syllabus { SyllabusDescription = "SQL Syllabus Content", CourseId = 1 },
@@ -187,3 +188,106 @@ var syllabuses = new List<Syllabus>
 };
 db.Syllabuses.AddRange(syllabuses);
 db.SaveChanges();
+
+//Queries
+//List all courses
+var coursesList = db.Courses.ToList();
+foreach (var course in coursesList)
+{
+    Console.WriteLine($"Course ID: {course.CourseId}, Course Name: {course.CourseName}");
+}
+
+//Show all assignments for a specific course
+var assignmentsForCourse = db.Assignments.Where(a => a.CourseId == 1).ToList();
+foreach(var assignment in assignmentsForCourse)
+{
+    Console.WriteLine($"Assignment ID: {assignment.AssignmentId}, Title: {assignment.AssignmentTitle}, CourseId: {assignment.CourseId}");
+}
+
+//List all students
+var studentList = db.Users.Where(s => s.Role == "Student").ToList();
+foreach(var student in studentList)
+{
+    Console.WriteLine($"Student ID: {student.UserId}, Name: {student.FirstName} {student.LastName}");
+}
+
+//Show all comments for a given assignment
+var commentsForAssignment = db.Comments.Where(c => c.AssignmentId == 1).ToList();
+foreach(var comment in commentsForAssignment)
+{
+    Console.WriteLine($"Comment: {comment.CommentContent}, AssignmentId: {comment.AssignmentId} ");
+}
+
+//Show all grades for a student
+var gradesForStudent = db.Grades.Where(g => g.StudentId == 1).ToList();
+foreach(var grade in gradesForStudent)
+{
+    Console.WriteLine($"StudentId: {grade.StudentId}, Grade: {grade.GradeNumber}, AssignmentId: {grade.AssignmentId}");
+}
+
+//List each assignment with its course and the teacher’s full name
+var assignmentsWithCourseAndTeacher = db.Assignments
+    .Include(a => a.Course)
+    .ThenInclude(c => c.Teacher)
+    .ToList();
+foreach (var assignment in assignmentsWithCourseAndTeacher)
+{
+    Console.WriteLine($"Assignment: {assignment.AssignmentTitle}, Course: {assignment.Course.CourseName}, Teacher: {assignment.Course.Teacher.FirstName} {assignment.Course.Teacher.LastName}");
+}
+
+//Query to show average grade per course
+var averageGradePerCourse = db.Grades
+    .GroupBy(g => g.Assignment.Course.CourseName)
+    .Select(g => new
+    {
+        CourseName = g.Key,
+        AverageGrade = g.Average(x => x.GradeNumber)
+    })
+    .ToList();
+foreach (var avgGrade in averageGradePerCourse)
+{
+    Console.WriteLine($"Course: {avgGrade.CourseName}, Average Grade: {avgGrade.AverageGrade}");
+}
+
+//Create a method to return letter grades (A, B, C, etc.) based on the student’s performance
+
+
+//Create a method to calculate GPA for a student
+
+
+//Updates & Deletions
+//Update a student’s role to “Teacher”
+var studentToUpdate = db.Users.FirstOrDefault(s => s.UserId == 3);
+
+if (studentToUpdate != null)
+{
+
+    if (studentToUpdate.Role == "Teacher")
+    {
+        Console.WriteLine("User is already a Teacher. No changes made.");
+    }
+    else
+    {
+        studentToUpdate.Role = "Teacher";
+        db.SaveChanges();
+        Console.WriteLine("Student role updated to Teacher successfully.");
+    }
+}
+else
+{
+    Console.WriteLine("Student not found.");
+}
+
+//Delete a specific comment
+var commentToDelete = db.Comments.FirstOrDefault(co => co.CommentId == 8);
+
+if (commentToDelete != null)
+{
+    db.Comments.Remove(commentToDelete);
+    db.SaveChanges();
+    Console.WriteLine("Comment deleted successfully.");
+}
+else
+{
+    Console.WriteLine("Comment not found.");
+}
