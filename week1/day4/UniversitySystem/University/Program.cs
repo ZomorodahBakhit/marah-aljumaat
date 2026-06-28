@@ -1,9 +1,10 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using University.API.Modules;
+using University.Core.Modules;
 using University.Core.Services;
 using University.Data;
+using University.Data.Moduls;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,8 +20,8 @@ builder.Services.AddDbContext<UniversityDbContext>(options =>
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(container =>
 {
-    container.RegisterModule<RepositoryModule>();
-    container.RegisterModule<ServiceModule>();
+    container.RegisterModule<RepositoryModules>();
+    container.RegisterModule<ServiceModules>();
 });
 
 // Controllers

@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using University.Core.Forms;
 using University.Core.Services;
-using University.API.Modules;
+
+using University.Data.Repositories;
 
 namespace University.API.Controllers
 {
