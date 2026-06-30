@@ -11,6 +11,6 @@ namespace University.Core.Forms
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         [Range(0,100)]
-        int Weight { get; set; }
+        public int Weight { get; set; }
     }
 }

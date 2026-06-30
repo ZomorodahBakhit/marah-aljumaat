@@ -10,5 +10,6 @@ namespace University.Core.DTOs
         public string CourseName { get; set; } = null!;
         public DateTime StartDate { get; set; } 
         public DateTime EndDate { get; set; }
+        public int Weight { get; set; }
     }
 }

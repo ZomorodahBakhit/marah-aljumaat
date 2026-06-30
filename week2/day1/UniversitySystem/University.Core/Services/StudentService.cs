@@ -24,11 +24,7 @@ namespace University.Core.Services
 
         public List<StudentDto> GetAll()
         {
-
             _logger.LogInformation("Attempting to retrieve all students");
-
-            try
-            {
                 var studentsDto = _repository.GetAll()
                     .Select(s => new StudentDto { StudentId = s.StudentId, StudentName = s.StudentName }).ToList();
 
@@ -42,13 +38,6 @@ namespace University.Core.Services
                 }
 
                 return studentsDto;
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogError(ex, "Error occurred while retrieving all students");
-                throw;
-            }
         }
 
         public StudentDto? GetById(int id)
@@ -56,13 +45,10 @@ namespace University.Core.Services
 
             _logger.LogInformation("Attempting to retrieve student by ID: {id}", id);
 
-            try
-            {
                 var student = _repository.GetById(id);
 
                 if (student == null)
                 {
-
                     _logger.LogWarning("Student with ID: {Id} not found", id);
                     throw new NotFoundException($"Student with ID {id} not found");
                 }
@@ -71,28 +57,16 @@ namespace University.Core.Services
 
                 return new StudentDto
                 {
-
                     StudentId = student.StudentId,
                     StudentName = student.StudentName
                 };
-
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogError(ex, "Error occurred while retrieving student with ID: {Id}", id);
-                throw;
-            }
         }
-
+           
         public void Create(CreateStudentForm form)
         {
 
-            _logger.LogInformation("Attempting to create new student with Name: {Name}, Email: {Email}",
-            form.Name, form.Email);
+            _logger.LogInformation("Attempting to create new student with Name: {Name}, Email: {Email}",form.Name, form.Email);
 
-            try
-            {
                 var validationResult = FormValidator.Validate(form);
 
                 if (!validationResult.IsValid)
@@ -102,7 +76,14 @@ namespace University.Core.Services
 
                     throw new BusinessException(validationResult.Errors);
                 }
+                if (IsEmailDuplicate(form.Email))
+                {
+                    _logger.LogWarning("Duplicate email detected during student creation: {Email}", form.Email);
 
+                    throw new BusinessException(new Dictionary<string, List<string>>{
+                        { nameof(form.Email), new List<string> { $"Email '{form.Email}' is already in use." } }
+                    });
+                }
                 var student = new Student
                 {
                     StudentName = form.Name,
@@ -111,25 +92,14 @@ namespace University.Core.Services
                 _repository.Add(student);
                 _logger.LogInformation("Successfully created student with ID: {Id}, Name: {Name}, Email: {Email}",
                    student.StudentId, student.StudentName, student.StudentEmail);
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogError(ex, "Error occurred while creating student with Name: {Name}, Email: {Email}",
-                        form.Name, form.Email);
-                throw;
-            }
-
         }
-
+            
         public void Update(int id, UpdateStudentForm form)
         {
 
             _logger.LogInformation("Attempting to update student with ID: {Id} with Name: {Name}, Email: {Email}",
               id, form.Name, form.Email);
 
-            try
-            {
                 var validationResult = FormValidator.Validate(form);
 
                 if (!validationResult.IsValid)
@@ -147,7 +117,14 @@ namespace University.Core.Services
                     throw new NotFoundException($"Student with ID {id} not found for updating");
                 }
 
-                var PreviousName = student.StudentName;
+                if (IsEmailDuplicate(form.Email, StudentId: id))
+                {
+                    _logger.LogWarning("Duplicate email detected during student update. ID: {Id}, Email: {Email}", id, form.Email);
+
+                    throw new BusinessException($"Email '{form.Email}' is already in use.");
+                }
+
+            var PreviousName = student.StudentName;
                 var PreviousEmail = student.StudentEmail;
 
                 student.StudentName = form.Name;
@@ -157,18 +134,12 @@ namespace University.Core.Services
                 _logger.LogInformation("Successfully updated student with ID: {Id}. Previous values: Name: {PreviousName}, Email: {PreviousEmail}. New values: Name: {NewName}, Email: {NewEmail}",
                 id, PreviousName, PreviousEmail, student.StudentName, student.StudentEmail);
 
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error occurred while updating student with ID: {Id}", id);
-                throw;
-            }
         }
+          
+        
         public void Delete(int id)
         {
             _logger.LogInformation("Attempting to delete student with Id: {id}", id);
-            try
-            {
                 var student = _repository.GetById(id);
                 if (student == null)
                 {
@@ -177,14 +148,13 @@ namespace University.Core.Services
                 }
                 _repository.Delete(id);
                 _logger.LogInformation("Successfully deleted student with ID: {Id}, Name: {Name}", id, student.StudentName);
-            }
-            catch (Exception ex)
-            {
 
-                _logger.LogError(ex, "Error occurred while deleting student with ID: {Id}", id);
-                throw;
-            }
-
+        }
+        private bool IsEmailDuplicate(string email, int? StudentId = null)
+        {
+            return _repository.GetAll()
+                .Any(s => s.StudentEmail.Equals(email, StringComparison.OrdinalIgnoreCase)
+                          && (!StudentId.HasValue || s.StudentId != StudentId.Value));
         }
 
     }
