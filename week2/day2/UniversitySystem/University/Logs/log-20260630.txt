@@ -1,0 +1,99 @@
+2026-06-30 20:24:03.868 +03:00 [INF] Now listening on: https://localhost:7045
+2026-06-30 20:24:03.905 +03:00 [INF] Now listening on: http://localhost:5079
+2026-06-30 20:24:03.997 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 20:24:03.997 +03:00 [INF] Hosting environment: Development
+2026-06-30 20:24:03.997 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day1\UniversitySystem\University
+2026-06-30 20:24:04.346 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-06-30 20:24:04.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 248.097ms
+2026-06-30 20:24:04.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-06-30 20:24:04.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-06-30 20:24:04.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-06-30 20:24:04.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 20:24:04.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-06-30 20:24:04.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 1.9618ms
+2026-06-30 20:24:04.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 20:24:04.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-06-30 20:24:04.673 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 65.1371ms
+2026-06-30 20:24:04.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 75.8986ms
+2026-06-30 20:24:04.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 75.5597ms
+2026-06-30 20:24:04.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 76.0262ms
+2026-06-30 20:24:04.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 76.2247ms
+2026-06-30 20:24:04.703 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.5519ms
+2026-06-30 20:24:04.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-06-30 20:24:04.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.6114ms
+2026-06-30 20:24:13.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students/5 - null null
+2026-06-30 20:24:13.962 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-30 20:24:14.000 +03:00 [INF] Route matched with {action = "GetById", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-30 20:24:14.264 +03:00 [INF] Attempting to retrieve student by ID: 5
+2026-06-30 20:24:15.862 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+WHERE [s].[StudentId] = @p
+2026-06-30 20:24:15.882 +03:00 [WRN] Student with ID: 5 not found
+2026-06-30 20:24:50.127 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-30 20:24:50.160 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetById (University.API) in 36152.6295ms
+2026-06-30 20:24:50.160 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetById (University.API)'
+2026-06-30 20:24:50.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students/5 - 404 null application/json; charset=utf-8 36219.4112ms
+2026-06-30 20:25:40.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course/2 - null null
+2026-06-30 20:25:40.278 +03:00 [INF] Executing endpoint 'University.API.Controllers.CourseController.GetById (University.API)'
+2026-06-30 20:25:40.282 +03:00 [INF] Route matched with {action = "GetById", controller = "Course"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetById(Int32) on controller University.API.Controllers.CourseController (University.API).
+2026-06-30 20:25:40.286 +03:00 [INF] Attempting to retrieve course by ID: 2
+2026-06-30 20:25:40.344 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CourseId], [c].[CourseName], [c].[EndDate], [c].[StartDate], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[CourseId] = @p
+2026-06-30 20:25:40.345 +03:00 [WRN] Course with ID: 2 not found
+2026-06-30 20:25:50.708 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-30 20:25:50.709 +03:00 [INF] Executed action University.API.Controllers.CourseController.GetById (University.API) in 10426.379ms
+2026-06-30 20:25:50.709 +03:00 [INF] Executed endpoint 'University.API.Controllers.CourseController.GetById (University.API)'
+2026-06-30 20:25:50.709 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course/2 - 404 null application/json; charset=utf-8 10433.9722ms
+2026-06-30 20:26:20.140 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7045/api/Course/2 - null null
+2026-06-30 20:26:20.140 +03:00 [INF] Executing endpoint 'University.API.Controllers.CourseController.Delete (University.API)'
+2026-06-30 20:26:20.141 +03:00 [INF] Route matched with {action = "Delete", controller = "Course"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Delete(Int32) on controller University.API.Controllers.CourseController (University.API).
+2026-06-30 20:26:20.143 +03:00 [INF] Attempting to delete course with Id: 2
+2026-06-30 20:26:20.246 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CourseId], [c].[CourseName], [c].[EndDate], [c].[StartDate], [c].[Weight]
+FROM [Courses] AS [c]
+WHERE [c].[CourseId] = @p
+2026-06-30 20:26:20.246 +03:00 [WRN] course with ID: 2 not found
+2026-06-30 20:26:27.403 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-30 20:26:27.404 +03:00 [INF] Executed action University.API.Controllers.CourseController.Delete (University.API) in 7262.3262ms
+2026-06-30 20:26:27.404 +03:00 [INF] Executed endpoint 'University.API.Controllers.CourseController.Delete (University.API)'
+2026-06-30 20:26:27.404 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7045/api/Course/2 - 404 null application/json; charset=utf-8 7264.2538ms
+2026-06-30 20:27:39.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-06-30 20:27:39.719 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-30 20:27:39.722 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-06-30 20:27:39.724 +03:00 [INF] Attempting to retrieve all students
+2026-06-30 20:27:39.740 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-06-30 20:27:39.741 +03:00 [WRN] No students found in the database
+2026-06-30 20:27:39.743 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-30 20:27:39.747 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 24.5657ms
+2026-06-30 20:27:39.747 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-06-30 20:27:39.748 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 null application/json; charset=utf-8 33.6348ms
+2026-06-30 20:29:19.559 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Students - application/json 52
+2026-06-30 20:29:19.560 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-30 20:29:19.564 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-30 20:29:19.598 +03:00 [INF] Attempting to create new student with Name: user1, Email: user@example.com
+2026-06-30 20:29:19.607 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-06-30 20:29:19.803 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([StudentEmail], [StudentName])
+OUTPUT INSERTED.[StudentId]
+VALUES (@p0, @p1);
+2026-06-30 20:29:19.828 +03:00 [INF] Successfully created student with ID: 2, Name: user1, Email: user@example.com
+2026-06-30 20:29:19.828 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-06-30 20:29:19.829 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 264.9087ms
+2026-06-30 20:29:19.829 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-06-30 20:29:19.829 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Students - 200 null application/json; charset=utf-8 270.3991ms
+2026-06-30 20:29:45.394 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7045/api/Students/1 - application/json 47
+2026-06-30 20:29:45.395 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-30 20:29:45.400 +03:00 [INF] Route matched with {action = "Update", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Update(Int32, University.Core.Forms.UpdateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-06-30 20:29:45.418 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-06-30 20:29:45.433 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Update (University.API) in 32.5147ms
+2026-06-30 20:29:45.433 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Update (University.API)'
+2026-06-30 20:29:45.433 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7045/api/Students/1 - 400 null application/json; charset=utf-8 39.4017ms
