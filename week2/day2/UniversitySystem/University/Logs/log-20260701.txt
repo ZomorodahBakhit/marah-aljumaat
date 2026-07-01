@@ -115,3 +115,1695 @@ VALUES (N'20260701142832_User', N'10.0.9');
 DECLARE @result int;
 EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
 SELECT @result
+2026-07-01 20:41:39.739 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 20:41:39.788 +03:00 [INF] Creating key {a60d309e-3178-4872-bc5c-ff7da3b84983} with creation date 2026-07-01 17:41:39Z, activation date 2026-07-01 17:41:39Z, and expiration date 2026-09-29 17:41:39Z.
+2026-07-01 20:41:39.817 +03:00 [INF] Writing data to file 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys\key-a60d309e-3178-4872-bc5c-ff7da3b84983.xml'.
+2026-07-01 20:41:40.025 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 20:41:40.025 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 20:41:40.084 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 20:41:40.084 +03:00 [INF] Hosting environment: Development
+2026-07-01 20:41:40.084 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 20:41:41.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 20:41:41.482 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 264.8847ms
+2026-07-01 20:41:41.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 20:41:41.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 20:41:41.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 20:41:41.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 20:41:41.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 20:41:41.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 20:41:41.522 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 29.556ms
+2026-07-01 20:41:41.522 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 20:41:41.588 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 96.0733ms
+2026-07-01 20:41:41.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 102.1014ms
+2026-07-01 20:41:41.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 101.2032ms
+2026-07-01 20:41:41.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 102.1015ms
+2026-07-01 20:41:41.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 102.101ms
+2026-07-01 20:41:41.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 389.2141ms
+2026-07-01 20:41:41.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 20:41:41.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.1531ms
+2026-07-01 20:42:31.391 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 136
+2026-07-01 20:42:33.699 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:42:33.730 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:42:35.199 +03:00 [INF] Executed DbCommand (158ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:42:52.018 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:42:52.037 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 18304.1772ms
+2026-07-01 20:42:52.037 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:42:52.177 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Marah",
+  "lastName": "Aljumaat",
+  "email": "marah.aljumaat@gmail.com",
+  "password": "123456",
+  "role": "Teacher"
+} Responded with [400] in 20780ms
+2026-07-01 20:42:52.184 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 400 703 application/json 20792.7633ms
+2026-07-01 20:43:08.655 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 138
+2026-07-01 20:43:08.657 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:08.657 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:43:08.753 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:43:12.254 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:43:12.254 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 3597.1472ms
+2026-07-01 20:43:12.255 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:12.256 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Marah",
+  "lastName": "Aljumaat",
+  "email": "marah.aljumaat@gmail.com",
+  "password": "123456Mm",
+  "role": "Teacher"
+} Responded with [400] in 3599ms
+2026-07-01 20:43:12.257 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 400 473 application/json 3601.5859ms
+2026-07-01 20:43:32.570 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 139
+2026-07-01 20:43:32.573 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:32.573 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:43:32.600 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:43:35.243 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:43:35.244 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 2670.9024ms
+2026-07-01 20:43:35.244 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:35.244 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Marah",
+  "lastName": "Aljumaat",
+  "email": "marah.aljumaat@gmail.com",
+  "password": "123456Mm*",
+  "role": "Teacher"
+} Responded with [400] in 2672ms
+2026-07-01 20:43:35.245 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 400 456 application/json 2674.4646ms
+2026-07-01 20:43:43.164 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 139
+2026-07-01 20:43:43.164 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:43.165 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:43:43.174 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:43:50.860 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:43:50.862 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 7696.9007ms
+2026-07-01 20:43:50.862 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:43:50.862 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Marah",
+  "lastName": "Aljumaat",
+  "email": "marah.aljumaat@gmail.com",
+  "password": "123456Mm*",
+  "role": "Teacher"
+} Responded with [400] in 7698ms
+2026-07-01 20:43:50.862 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 400 456 application/json 7698.6345ms
+2026-07-01 20:46:36.751 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 20:46:36.971 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 20:46:36.971 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 20:46:37.103 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 20:46:37.103 +03:00 [INF] Hosting environment: Development
+2026-07-01 20:46:37.103 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 20:46:38.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 20:46:38.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 180.8755ms
+2026-07-01 20:46:38.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 20:46:38.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 20:46:38.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 20:46:38.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 20:46:38.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 20:46:38.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 20:46:38.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 20:46:38.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 33.8015ms
+2026-07-01 20:46:38.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 103.4458ms
+2026-07-01 20:46:38.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 108.0599ms
+2026-07-01 20:46:38.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 108.0601ms
+2026-07-01 20:46:38.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 107.3491ms
+2026-07-01 20:46:38.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 108.2426ms
+2026-07-01 20:46:38.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.5499ms
+2026-07-01 20:46:38.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 20:46:38.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.5688ms
+2026-07-01 20:47:33.998 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 154
+2026-07-01 20:47:34.092 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:47:34.123 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:47:48.452 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:47:48.581 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:47:48.782 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 20:47:48.821 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 20:47:48.828 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 20:47:48.849 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([ConcurrencyStamp], [Name], [NormalizedName])
+OUTPUT INSERTED.[RoleId]
+VALUES (@p0, @p1, @p2);
+2026-07-01 20:47:48.890 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 20:47:48.930 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 20:47:48.933 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 20:47:48.958 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:47:49.026 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 20:47:49.046 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:47:49.061 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 14932.5517ms
+2026-07-01 20:47:49.061 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:47:49.210 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Marah",
+  "lastName": "Cumat",
+  "email": "Marah@gmail.com",
+  "password": "Mm*123456",
+  "role": "Teacher",
+  "userName": "Marah-123"
+} Responded with [200] in 15173ms
+2026-07-01 20:47:49.216 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 468 application/json 15218.3707ms
+2026-07-01 20:48:54.044 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 148
+2026-07-01 20:48:54.046 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:48:54.047 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:48:59.162 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 20:48:59.219 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:48:59.227 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 20:48:59.231 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 20:48:59.232 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 20:48:59.237 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([ConcurrencyStamp], [Name], [NormalizedName])
+OUTPUT INSERTED.[RoleId]
+VALUES (@p0, @p1, @p2);
+2026-07-01 20:48:59.241 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 20:48:59.250 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 20:48:59.252 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 20:48:59.253 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:48:59.264 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 20:48:59.265 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:48:59.265 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 5217.9949ms
+2026-07-01 20:48:59.265 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 20:48:59.266 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "Ali",
+  "lastName": "Cumat",
+  "email": "ali@gmail.com",
+  "password": "Aa123456*",
+  "role": "Student",
+  "userName": "Ali-aaa"
+} Responded with [200] in 5220ms
+2026-07-01 20:48:59.266 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 464 application/json 5222.1467ms
+2026-07-01 20:49:45.810 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 81
+2026-07-01 20:49:45.841 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 20:49:45.850 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:49:45.888 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:49:55.380 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 20:49:55.385 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 9534.7444ms
+2026-07-01 20:49:55.385 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 20:49:55.395 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "marah@gmail.com",
+  "password": "Mm*123456",
+  "rememberMe": true
+} Responded with [400] in 9554ms
+2026-07-01 20:49:55.395 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 9585.0244ms
+2026-07-01 20:50:31.864 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 79
+2026-07-01 20:50:31.892 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 20:50:31.892 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:50:31.900 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 20:54:49.313 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 20:54:49.491 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 20:54:49.491 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 20:54:49.655 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 20:54:49.656 +03:00 [INF] Hosting environment: Development
+2026-07-01 20:54:49.656 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 20:54:50.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 20:54:50.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 172.5532ms
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 20:54:50.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 20:54:50.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 20:54:50.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 3.4019ms
+2026-07-01 20:54:50.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 43.5159ms
+2026-07-01 20:54:50.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 49.5094ms
+2026-07-01 20:54:50.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 49.3597ms
+2026-07-01 20:54:50.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 49.4939ms
+2026-07-01 20:54:50.644 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 49.7767ms
+2026-07-01 20:54:50.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.4409ms
+2026-07-01 20:54:50.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 20:54:50.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.0239ms
+2026-07-01 20:55:28.506 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 81
+2026-07-01 20:55:28.595 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 20:55:28.623 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 20:55:30.117 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:00:38.758 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:00:39.031 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:00:39.032 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:00:39.084 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:00:39.084 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:00:39.084 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:00:39.819 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:00:40.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 208.1922ms
+2026-07-01 21:00:40.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:00:40.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:00:40.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:00:40.029 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:00:40.029 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:00:40.029 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:00:40.031 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:00:40.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 3.5417ms
+2026-07-01 21:00:40.116 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 87.5363ms
+2026-07-01 21:00:40.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 95.7853ms
+2026-07-01 21:00:40.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 95.8233ms
+2026-07-01 21:00:40.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 95.8427ms
+2026-07-01 21:00:40.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 95.7854ms
+2026-07-01 21:00:40.149 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.0514ms
+2026-07-01 21:00:40.220 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:00:40.265 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.468ms
+2026-07-01 21:01:16.828 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 144
+2026-07-01 21:01:16.903 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:01:16.929 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:01:48.125 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:01:48.231 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:01:48.397 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:01:48.440 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:01:48.463 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:01:48.497 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:01:48.503 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:01:48.514 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:01:48.553 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:01:48.572 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:01:48.584 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 31651.3584ms
+2026-07-01 21:01:48.585 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:01:48.757 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "kutay",
+  "lastName": "cumat",
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "role": "Teacher",
+  "userName": "K_123"
+} Responded with [200] in 31922ms
+2026-07-01 21:01:48.764 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 464 application/json 31936.5399ms
+2026-07-01 21:02:22.292 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:02:22.300 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:02:22.312 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:02:22.398 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:02:28.405 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:02:28.414 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 6101.2965ms
+2026-07-01 21:02:28.414 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:02:28.425 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 6126ms
+2026-07-01 21:02:28.425 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 6133.5605ms
+2026-07-01 21:05:31.675 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:05:31.875 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:05:31.876 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:05:31.937 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:05:31.937 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:05:31.937 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:05:32.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:05:32.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 171.5353ms
+2026-07-01 21:05:32.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:05:32.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:05:32.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:05:32.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:05:32.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:05:32.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:05:32.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 34.765ms
+2026-07-01 21:05:32.505 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:05:32.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 19.9221ms
+2026-07-01 21:05:32.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 54.6831ms
+2026-07-01 21:05:32.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 55.4463ms
+2026-07-01 21:05:32.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 55.5308ms
+2026-07-01 21:05:32.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 55.5306ms
+2026-07-01 21:05:32.542 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.1865ms
+2026-07-01 21:05:32.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:05:32.607 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4989ms
+2026-07-01 21:06:09.760 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 152
+2026-07-01 21:06:09.841 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:06:09.874 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:06:11.537 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:06:59.400 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:06:59.413 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 49536.5402ms
+2026-07-01 21:06:59.414 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:06:59.602 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "AQAAAAIAAYagAAAAEOUvzkDpMmWf7523FmQZqhd85d3ZdXxsEt3XLerchFI6hDudwjk8Nsh/VVP9kJW99g==",
+  "rememberMe": true
+} Responded with [400] in 49832ms
+2026-07-01 21:06:59.612 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 49852.1545ms
+2026-07-01 21:07:11.467 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 152
+2026-07-01 21:07:11.471 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:07:11.472 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:07:11.566 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:07:13.188 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:07:13.188 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 1716.3399ms
+2026-07-01 21:07:13.188 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:07:13.190 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "K@gmail.com",
+  "password": "AQAAAAIAAYagAAAAEOUvzkDpMmWf7523FmQZqhd85d3ZdXxsEt3XLerchFI6hDudwjk8Nsh/VVP9kJW99g==",
+  "rememberMe": true
+} Responded with [400] in 1720ms
+2026-07-01 21:07:13.190 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 1723.4804ms
+2026-07-01 21:07:30.536 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:07:30.537 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:07:30.537 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:07:30.552 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:07:48.897 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:07:48.897 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 18360.1969ms
+2026-07-01 21:07:48.897 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:07:48.898 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "K@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 18361ms
+2026-07-01 21:07:48.898 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 18362.0478ms
+2026-07-01 21:08:08.423 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:08:08.424 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:08:08.424 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:08:08.434 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:08:10.928 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:08:10.928 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 2504.0529ms
+2026-07-01 21:08:10.928 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:08:10.929 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 2505ms
+2026-07-01 21:08:10.929 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 2506.3028ms
+2026-07-01 21:10:29.434 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:10:29.642 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:10:29.642 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:10:29.787 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:10:29.787 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:10:29.787 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:10:30.582 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:10:30.734 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 162.2679ms
+2026-07-01 21:10:30.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:10:30.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:10:30.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:10:30.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:10:30.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:10:30.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:10:30.798 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 57.7173ms
+2026-07-01 21:10:30.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:10:30.871 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 129.9066ms
+2026-07-01 21:10:30.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 134.4998ms
+2026-07-01 21:10:30.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 134.4409ms
+2026-07-01 21:10:30.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 134.5235ms
+2026-07-01 21:10:30.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 134.5143ms
+2026-07-01 21:10:30.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.2335ms
+2026-07-01 21:10:30.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:10:30.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4388ms
+2026-07-01 21:11:21.272 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:11:21.348 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:11:21.383 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:11:23.343 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:12:13.634 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:12:13.657 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 52268.9568ms
+2026-07-01 21:12:13.657 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:12:13.832 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 52554ms
+2026-07-01 21:12:13.838 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 52566.2672ms
+2026-07-01 21:15:13.962 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:15:14.187 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:15:14.187 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:15:14.460 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:15:14.460 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:15:14.460 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:15:14.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:15:15.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 197.598ms
+2026-07-01 21:15:15.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:15:15.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:15:15.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:15:15.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:15:15.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:15:15.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:15:15.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:15:15.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 4.1867ms
+2026-07-01 21:15:15.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 71.2336ms
+2026-07-01 21:15:15.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 78.2537ms
+2026-07-01 21:15:15.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 78.1886ms
+2026-07-01 21:15:15.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 78.3012ms
+2026-07-01 21:15:15.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 78.2537ms
+2026-07-01 21:15:15.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.6671ms
+2026-07-01 21:15:15.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:15:15.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.5836ms
+2026-07-01 21:15:34.690 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:15:34.762 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:15:34.798 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:15:36.558 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:15:48.235 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:15:48.265 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 13460.0006ms
+2026-07-01 21:15:48.266 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:15:48.453 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 13755ms
+2026-07-01 21:15:48.462 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 13772.731ms
+2026-07-01 21:16:15.915 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 69
+2026-07-01 21:16:15.919 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:16:15.920 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:16:15.928 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-01 21:16:15.952 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 31.7035ms
+2026-07-01 21:16:15.952 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:16:15.954 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "K_123",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 37ms
+2026-07-01 21:16:15.955 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 435 application/json 39.8635ms
+2026-07-01 21:16:16.892 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 69
+2026-07-01 21:16:16.893 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:16:16.894 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:16:16.895 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-01 21:16:16.896 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 1.9852ms
+2026-07-01 21:16:16.896 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:16:16.896 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "K_123",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 3ms
+2026-07-01 21:16:16.896 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 435 application/json 3.9095ms
+2026-07-01 21:17:54.712 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:17:54.899 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:17:54.899 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:17:55.041 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:17:55.041 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:17:55.041 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:17:56.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:17:56.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 167.791ms
+2026-07-01 21:17:56.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:17:56.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:17:56.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:17:56.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:17:56.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:17:56.186 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:17:56.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:17:56.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 31.8923ms
+2026-07-01 21:17:56.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 71.5592ms
+2026-07-01 21:17:56.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 77.8945ms
+2026-07-01 21:17:56.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 77.9714ms
+2026-07-01 21:17:56.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 78.02ms
+2026-07-01 21:17:56.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 78.0221ms
+2026-07-01 21:17:56.287 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.3025ms
+2026-07-01 21:17:56.323 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:17:56.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.3043ms
+2026-07-01 21:18:18.009 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:18:18.082 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:18:18.114 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:18:19.782 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:18:22.757 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:18:22.782 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 4662.7867ms
+2026-07-01 21:18:22.783 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:18:22.947 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "k@gmail.com",
+  "password": "Kk*1234",
+  "rememberMe": true
+} Responded with [400] in 4931ms
+2026-07-01 21:18:22.954 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 310 application/json 4945.1331ms
+2026-07-01 21:18:55.487 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 112
+2026-07-01 21:18:55.491 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:18:55.499 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:18:55.604 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:18:55.675 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:18:55.901 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:18:55.948 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:18:55.954 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:18:55.982 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 256), @p2='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([ConcurrencyStamp], [Name], [NormalizedName])
+OUTPUT INSERTED.[RoleId]
+VALUES (@p0, @p1, @p2);
+2026-07-01 21:18:55.998 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:18:56.045 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:18:56.049 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:18:56.067 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:18:56.116 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:18:56.135 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:18:56.140 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 640.9034ms
+2026-07-01 21:18:56.141 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:18:56.169 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "m",
+  "lastName": "c",
+  "email": "m@gmail.com",
+  "password": "Ma+1234",
+  "role": "string"
+} Responded with [200] in 679ms
+2026-07-01 21:18:56.170 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 455 application/json 682.6082ms
+2026-07-01 21:19:43.899 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:19:43.901 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:19:43.902 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:19:43.921 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:19:44.068 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:19:44.097 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:19:44.099 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:19:44.109 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:19:44.129 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:19:44.131 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:19:44.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:19:44.294 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:19:44.294 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 392.0819ms
+2026-07-01 21:19:44.294 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:19:44.295 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "m@gmail.com",
+  "password": "Ma+1234",
+  "rememberMe": true
+} Responded with [200] in 394ms
+2026-07-01 21:19:44.295 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 569 application/json 396.785ms
+2026-07-01 21:20:20.743 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 113
+2026-07-01 21:20:20.745 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:20:20.745 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:20:20.756 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:20:26.736 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:20:26.748 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 6002.8567ms
+2026-07-01 21:20:26.748 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:20:26.749 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "w",
+  "lastName": "c",
+  "email": "w@gmail.com",
+  "password": "wa+1234",
+  "role": "Teacher"
+} Responded with [400] in 6006ms
+2026-07-01 21:20:26.750 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 400 456 application/json 6006.9321ms
+2026-07-01 21:20:43.170 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 113
+2026-07-01 21:20:43.170 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:20:43.171 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:20:43.173 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:20:43.262 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:20:43.279 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:20:43.284 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:20:43.289 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:20:43.293 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:20:43.294 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:20:43.295 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:20:43.306 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:20:43.308 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:20:43.309 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 137.909ms
+2026-07-01 21:20:43.309 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:20:43.309 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "w",
+  "lastName": "c",
+  "email": "w@gmail.com",
+  "password": "Wa+1234",
+  "role": "Teacher"
+} Responded with [200] in 139ms
+2026-07-01 21:20:43.310 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 456 application/json 139.8188ms
+2026-07-01 21:21:06.127 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 74
+2026-07-01 21:21:06.127 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:21:06.128 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:21:06.145 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-01 21:21:06.159 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 31.4872ms
+2026-07-01 21:21:06.159 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:21:06.160 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "w@gmail.com",
+  "password": "Wa+1234,
+  "rememberMe": true
+} Responded with [400] in 32ms
+2026-07-01 21:21:06.160 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 400 604 application/json 33.1217ms
+2026-07-01 21:21:46.315 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:21:46.316 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:21:46.318 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:21:46.330 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:21:46.421 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:21:46.426 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:21:46.428 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:21:46.432 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:21:46.439 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:21:46.443 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:21:46.444 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:21:46.445 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:21:46.445 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 127.1974ms
+2026-07-01 21:21:46.445 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:21:46.445 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "w@gmail.com",
+  "password": "Wa+1234",
+  "rememberMe": true
+} Responded with [200] in 129ms
+2026-07-01 21:21:46.445 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 571 application/json 129.925ms
+2026-07-01 21:22:38.581 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:22:38.603 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:22:38.628 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:22:38.633 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:22:38.641 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:22:38.646 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 64ms
+2026-07-01 21:22:38.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 65.1475ms
+2026-07-01 21:23:15.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:23:15.790 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:23:15.790 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:23:15.791 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:23:15.791 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:23:15.792 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 2ms
+2026-07-01 21:23:15.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 2.812ms
+2026-07-01 21:24:22.602 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:24:22.858 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:24:22.858 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:24:23.079 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:24:23.079 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:24:23.079 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:24:23.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:24:23.954 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 271.6272ms
+2026-07-01 21:24:23.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:24:23.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:24:23.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:24:23.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:24:23.961 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:24:23.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:24:23.964 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 3.3159ms
+2026-07-01 21:24:24.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:24:24.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 87.632ms
+2026-07-01 21:24:24.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 93.7225ms
+2026-07-01 21:24:24.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 93.7459ms
+2026-07-01 21:24:24.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 93.7239ms
+2026-07-01 21:24:24.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 93.6464ms
+2026-07-01 21:24:24.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.1797ms
+2026-07-01 21:24:24.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:24:24.156 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.1746ms
+2026-07-01 21:24:36.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:24:36.350 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:24:36.354 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:24:36.500 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 214ms
+2026-07-01 21:24:36.500 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 224.0297ms
+2026-07-01 21:25:03.235 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:25:03.247 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:25:03.280 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:25:04.989 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:25:05.250 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:25:05.284 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:25:05.300 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:25:05.322 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:25:05.351 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:25:05.366 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:25:05.372 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:25:05.402 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:25:05.416 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 2132.4315ms
+2026-07-01 21:25:05.417 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:25:05.508 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "w@gmail.com",
+  "password": "Wa+1234",
+  "rememberMe": true
+} Responded with [200] in 2271ms
+2026-07-01 21:25:05.514 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 571 application/json 2279.0758ms
+2026-07-01 21:26:41.944 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:26:41.964 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:26:41.983 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:26:41.984 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:26:41.985 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:26:41.986 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 40ms
+2026-07-01 21:26:41.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 43.1869ms
+2026-07-01 21:31:23.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:31:23.138 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:31:23.138 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:31:23.138 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:31:23.138 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:31:23.139 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 29ms
+2026-07-01 21:31:23.139 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 30.3558ms
+2026-07-01 21:31:23.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:31:23.882 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:31:23.882 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:31:23.882 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:31:23.882 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:31:23.883 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 1ms
+2026-07-01 21:31:23.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 2.1572ms
+2026-07-01 21:31:26.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:31:26.843 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:31:26.843 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:31:26.844 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:31:26.844 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:31:26.844 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 1ms
+2026-07-01 21:31:26.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 2.4366ms
+2026-07-01 21:31:44.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:31:44.094 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:31:44.095 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:31:44.095 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:31:44.095 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:31:44.096 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 1ms
+2026-07-01 21:31:44.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 2.3982ms
+2026-07-01 21:39:13.956 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:39:14.160 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:39:14.160 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:39:14.195 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:39:14.195 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:39:14.196 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:39:14.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:39:14.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 157.5695ms
+2026-07-01 21:39:14.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:39:14.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:39:14.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:39:14.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:39:14.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:39:14.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:39:14.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:39:14.950 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 3.139ms
+2026-07-01 21:39:14.993 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 45.4981ms
+2026-07-01 21:39:14.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 49.3194ms
+2026-07-01 21:39:14.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 49.2171ms
+2026-07-01 21:39:14.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 49.3192ms
+2026-07-01 21:39:14.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 49.4269ms
+2026-07-01 21:39:15.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.2057ms
+2026-07-01 21:39:15.058 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:39:15.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.853ms
+2026-07-01 21:39:52.949 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 113
+2026-07-01 21:39:53.023 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:39:53.070 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:39:54.865 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:39:54.959 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:39:55.183 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:39:55.219 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:39:55.244 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:39:55.295 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:39:55.303 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:39:55.316 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:39:55.382 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:39:55.416 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:39:55.428 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 2355.1395ms
+2026-07-01 21:39:55.429 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:39:55.599 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "s",
+  "lastName": "c",
+  "email": "s@gmail.com",
+  "password": "Sa+1234",
+  "role": "Student"
+} Responded with [200] in 2644ms
+2026-07-01 21:39:55.605 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 456 application/json 2656.7043ms
+2026-07-01 21:40:30.064 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 75
+2026-07-01 21:40:30.067 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:40:30.077 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:40:30.150 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:40:30.262 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:40:30.290 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:40:30.294 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:40:30.308 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:40:30.333 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:40:30.336 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:40:30.337 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:40:30.360 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:40:30.363 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 286.2446ms
+2026-07-01 21:40:30.363 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:40:30.365 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "s@gmail.com",
+  "password": "Sa+1234",
+  "rememberMe": true
+} Responded with [200] in 298ms
+2026-07-01 21:40:30.365 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 571 application/json 301.06ms
+2026-07-01 21:41:04.998 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:41:05.023 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:41:05.042 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:41:05.050 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:41:05.057 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:41:05.066 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 68ms
+2026-07-01 21:41:05.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 68.8754ms
+2026-07-01 21:41:40.704 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:41:40.914 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:41:40.915 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:41:41.056 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:41:41.056 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:41:41.056 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:41:42.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:41:42.683 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 223.839ms
+2026-07-01 21:41:42.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:41:42.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:41:42.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:41:42.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:41:42.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:41:42.692 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:41:42.696 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:41:42.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 5.7739ms
+2026-07-01 21:41:42.711 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 19.554ms
+2026-07-01 21:41:42.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 27.5218ms
+2026-07-01 21:41:42.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 28.2717ms
+2026-07-01 21:41:42.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 28.3185ms
+2026-07-01 21:41:42.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 28.4062ms
+2026-07-01 21:41:42.747 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.9678ms
+2026-07-01 21:41:42.783 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:41:42.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.5126ms
+2026-07-01 21:41:56.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:41:56.915 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:41:56.939 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:41:56.947 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:41:56.953 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:41:57.068 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 232ms
+2026-07-01 21:41:57.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 240.9418ms
+2026-07-01 21:44:43.933 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:44:44.130 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:44:44.130 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:44:44.168 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:44:44.168 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:44:44.168 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:44:44.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:44:45.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 265.5239ms
+2026-07-01 21:44:45.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:44:45.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:44:45.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:44:45.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:44:45.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:44:45.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:44:45.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:44:45.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 59.9167ms
+2026-07-01 21:44:45.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 48.979ms
+2026-07-01 21:44:45.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 83.8758ms
+2026-07-01 21:44:45.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 84.4751ms
+2026-07-01 21:44:45.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 84.4713ms
+2026-07-01 21:44:45.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 84.4737ms
+2026-07-01 21:44:45.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.632ms
+2026-07-01 21:44:45.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:44:45.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.733ms
+2026-07-01 21:44:57.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:44:57.434 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:44:57.452 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:44:57.461 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:44:57.466 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:44:57.581 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 224ms
+2026-07-01 21:44:57.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 229.8364ms
+2026-07-01 21:45:03.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:45:03.199 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:45:03.199 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:45:03.200 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:45:03.200 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:45:03.201 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [401] in 3ms
+2026-07-01 21:45:03.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 401 119 application/json 5.1903ms
+2026-07-01 21:52:12.347 +03:00 [INF] User profile is available. Using 'C:\Users\marah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-01 21:52:12.535 +03:00 [INF] Now listening on: https://localhost:7045
+2026-07-01 21:52:12.536 +03:00 [INF] Now listening on: http://localhost:5079
+2026-07-01 21:52:12.568 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 21:52:12.568 +03:00 [INF] Hosting environment: Development
+2026-07-01 21:52:12.568 +03:00 [INF] Content root path: C:\Users\marah\OneDrive\Desktop\marah-aljumaat\week2\day2\UniversitySystem\University
+2026-07-01 21:52:13.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.html - null null
+2026-07-01 21:52:13.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.html - 304 null null 165.9824ms
+2026-07-01 21:52:13.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - null null
+2026-07-01 21:52:13.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - null null
+2026-07-01 21:52:13.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.css - null null
+2026-07-01 21:52:13.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/index.js - null null
+2026-07-01 21:52:13.877 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-01 21:52:13.877 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-01 21:52:13.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/_vs/browserLink - null null
+2026-07-01 21:52:13.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.js - 304 null null 5.1222ms
+2026-07-01 21:52:13.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_framework/aspnetcore-browser-refresh.js - 200 14933 application/javascript; charset=utf-8 47.7215ms
+2026-07-01 21:52:13.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/index.css - 304 null null 51.0162ms
+2026-07-01 21:52:13.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-standalone-preset.js - 304 null null 49.2243ms
+2026-07-01 21:52:13.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui-bundle.js - 304 null null 50.8521ms
+2026-07-01 21:52:13.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/swagger-ui.css - 304 null null 51.0162ms
+2026-07-01 21:52:13.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.3693ms
+2026-07-01 21:52:13.985 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - null null
+2026-07-01 21:52:14.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5565ms
+2026-07-01 21:52:54.295 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 122
+2026-07-01 21:52:54.371 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:52:54.401 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:52:56.029 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:52:56.139 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:52:56.313 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:52:56.373 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:52:56.420 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:52:56.459 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:52:56.466 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:52:56.479 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:52:56.524 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:52:56.552 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:52:56.576 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 2169.0745ms
+2026-07-01 21:52:56.577 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:52:56.785 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "ahmad",
+  "lastName": "ahmad",
+  "email": "ah@gmail.com",
+  "password": "Aa+1234",
+  "role": "Student"
+} Responded with [200] in 2483ms
+2026-07-01 21:52:56.790 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 465 application/json 2495.6653ms
+2026-07-01 21:53:25.619 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 76
+2026-07-01 21:53:25.621 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:53:25.631 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:53:25.720 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:53:25.834 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:53:25.871 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:53:25.874 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:53:25.888 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:53:25.929 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:53:25.932 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:53:25.935 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:53:25.971 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:53:25.978 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 346.7616ms
+2026-07-01 21:53:25.978 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:53:25.980 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "ah@gmail.com",
+  "password": "Aa+1234",
+  "rememberMe": true
+} Responded with [200] in 359ms
+2026-07-01 21:53:25.981 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 572 application/json 361.9525ms
+2026-07-01 21:54:01.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:54:01.649 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-01 21:54:01.669 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-07-01 21:54:01.679 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Student)
+2026-07-01 21:54:01.686 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-01 21:54:01.698 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [401] in 69ms
+2026-07-01 21:54:01.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 401 119 application/json 71.9116ms
+2026-07-01 21:55:30.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:55:30.971 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:55:30.973 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:55:30.975 +03:00 [INF] Attempting to retrieve all students
+2026-07-01 21:55:31.001 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:55:31.009 +03:00 [INF] Successfully retrieved 1 students
+2026-07-01 21:55:31.010 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:55:31.011 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 38.3131ms
+2026-07-01 21:55:31.011 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:55:31.012 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [200] in 73ms
+2026-07-01 21:55:31.012 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 286 application/json 74.6997ms
+2026-07-01 21:55:54.986 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:55:54.988 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:55:54.990 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-07-01 21:55:54.991 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [403] in 4ms
+2026-07-01 21:55:54.991 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 403 135 application/json 5.0288ms
+2026-07-01 21:55:59.991 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:55:59.992 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:55:59.992 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:55:59.993 +03:00 [INF] Attempting to retrieve all students
+2026-07-01 21:55:59.995 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:55:59.995 +03:00 [INF] Successfully retrieved 1 students
+2026-07-01 21:55:59.995 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:55:59.995 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 3.056ms
+2026-07-01 21:55:59.995 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:55:59.996 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [200] in 4ms
+2026-07-01 21:55:59.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 286 application/json 5.3747ms
+2026-07-01 21:56:04.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:56:04.255 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:56:04.255 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:56:04.255 +03:00 [INF] Attempting to retrieve all students
+2026-07-01 21:56:04.257 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:56:04.258 +03:00 [INF] Successfully retrieved 1 students
+2026-07-01 21:56:04.258 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:56:04.258 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 2.8725ms
+2026-07-01 21:56:04.258 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:56:04.259 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [200] in 4ms
+2026-07-01 21:56:04.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 286 application/json 4.4331ms
+2026-07-01 21:56:27.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:56:27.509 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Teacher)
+2026-07-01 21:56:27.509 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-07-01 21:56:27.510 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [403] in 1ms
+2026-07-01 21:56:27.510 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 403 135 application/json 2.3192ms
+2026-07-01 21:56:33.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:56:33.378 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:56:33.378 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:56:33.378 +03:00 [INF] Attempting to retrieve all students
+2026-07-01 21:56:33.382 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:56:33.382 +03:00 [INF] Successfully retrieved 1 students
+2026-07-01 21:56:33.382 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:56:33.383 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 4.9066ms
+2026-07-01 21:56:33.383 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:56:33.383 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [200] in 5ms
+2026-07-01 21:56:33.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 286 application/json 6.2942ms
+2026-07-01 21:57:05.379 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Students - application/json 46
+2026-07-01 21:57:05.380 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-07-01 21:57:05.382 +03:00 [INF] Route matched with {action = "Create", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateStudentForm) on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:57:05.388 +03:00 [INF] Attempting to create new student with Name: momo, Email: u@gmail.com
+2026-07-01 21:57:05.391 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:57:05.415 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([StudentEmail], [StudentName])
+OUTPUT INSERTED.[StudentId]
+VALUES (@p0, @p1);
+2026-07-01 21:57:05.421 +03:00 [INF] Successfully created student with ID: 3, Name: momo, Email: u@gmail.com
+2026-07-01 21:57:05.421 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:57:05.421 +03:00 [INF] Executed action University.API.Controllers.StudentsController.Create (University.API) in 39.5878ms
+2026-07-01 21:57:05.421 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.Create (University.API)'
+2026-07-01 21:57:05.422 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Students  {
+  "name": "momo",
+  "email": "u@gmail.com"
+} Responded with [200] in 42ms
+2026-07-01 21:57:05.422 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Students - 200 239 application/json 43.3887ms
+2026-07-01 21:57:18.203 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Students - null null
+2026-07-01 21:57:18.203 +03:00 [INF] Executing endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:57:18.203 +03:00 [INF] Route matched with {action = "GetAll", controller = "Students"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.StudentsController (University.API).
+2026-07-01 21:57:18.204 +03:00 [INF] Attempting to retrieve all students
+2026-07-01 21:57:18.207 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[StudentEmail], [s].[StudentName]
+FROM [Students] AS [s]
+2026-07-01 21:57:18.207 +03:00 [INF] Successfully retrieved 2 students
+2026-07-01 21:57:18.207 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:57:18.208 +03:00 [INF] Executed action University.API.Controllers.StudentsController.GetAll (University.API) in 4.2498ms
+2026-07-01 21:57:18.208 +03:00 [INF] Executed endpoint 'University.API.Controllers.StudentsController.GetAll (University.API)'
+2026-07-01 21:57:18.208 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Students   Responded with [200] in 5ms
+2026-07-01 21:57:18.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Students - 200 361 application/json 5.8732ms
+2026-07-01 21:58:07.235 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/register - application/json 118
+2026-07-01 21:58:07.236 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:58:07.236 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Register(University.Core.Forms.RegisterForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:58:07.244 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:58:07.292 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:58:07.300 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-07-01 21:58:07.304 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:58:07.308 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:58:07.313 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @p AND [u].[RoleId] = @p1
+2026-07-01 21:58:07.314 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedRoleName
+2026-07-01 21:58:07.316 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:58:07.327 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p18='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [UserId] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-07-01 21:58:07.328 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:58:07.329 +03:00 [INF] Executed action University.API.Controllers.AuthController.Register (University.API) in 92.5642ms
+2026-07-01 21:58:07.329 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Register (University.API)'
+2026-07-01 21:58:07.330 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/register  {
+  "firstName": "WAEL",
+  "lastName": "cu",
+  "email": "wa@gmail.com",
+  "password": "Wa+1234",
+  "role": "Teacher"
+} Responded with [200] in 93ms
+2026-07-01 21:58:07.330 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/register - 200 461 application/json 94.4832ms
+2026-07-01 21:58:35.104 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Auth/login - application/json 76
+2026-07-01 21:58:35.106 +03:00 [INF] Executing endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:58:35.106 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[AutoWrapper.Wrappers.ApiResponse] Login(University.Core.Forms.LoginForm) on controller University.API.Controllers.AuthController (University.API).
+2026-07-01 21:58:35.115 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @normalizedUserName
+2026-07-01 21:58:35.175 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserClaimId], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [UserClaims] AS [u]
+WHERE [u].[UserId] = @user_Id
+2026-07-01 21:58:35.180 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:58:35.183 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @normalizedName
+2026-07-01 21:58:35.187 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [RoleClaims] AS [r]
+WHERE [r].[RoleId] = @role_Id
+2026-07-01 21:58:35.188 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-01 21:58:35.191 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @normalizedEmail
+2026-07-01 21:58:35.193 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[RoleId]
+WHERE [u].[UserId] = @userId
+2026-07-01 21:58:35.193 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:58:35.193 +03:00 [INF] Executed action University.API.Controllers.AuthController.Login (University.API) in 87.1191ms
+2026-07-01 21:58:35.193 +03:00 [INF] Executed endpoint 'University.API.Controllers.AuthController.Login (University.API)'
+2026-07-01 21:58:35.194 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Auth/login  {
+  "email": "wa@gmail.com",
+  "password": "Wa+1234",
+  "rememberMe": true
+} Responded with [200] in 89ms
+2026-07-01 21:58:35.194 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Auth/login - 200 572 application/json 89.7196ms
+2026-07-01 21:58:59.944 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7045/api/Course - null null
+2026-07-01 21:58:59.945 +03:00 [INF] Executing endpoint 'University.API.Controllers.CourseController.GetAll (University.API)'
+2026-07-01 21:58:59.947 +03:00 [INF] Route matched with {action = "GetAll", controller = "Course"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse GetAll() on controller University.API.Controllers.CourseController (University.API).
+2026-07-01 21:58:59.950 +03:00 [INF] Attempting to retrieve all courses
+2026-07-01 21:58:59.962 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourseId], [c].[CourseName], [c].[EndDate], [c].[StartDate], [c].[Weight]
+FROM [Courses] AS [c]
+2026-07-01 21:58:59.962 +03:00 [WRN] No courses found
+2026-07-01 21:58:59.962 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:58:59.969 +03:00 [INF] Executed action University.API.Controllers.CourseController.GetAll (University.API) in 22.1223ms
+2026-07-01 21:58:59.969 +03:00 [INF] Executed endpoint 'University.API.Controllers.CourseController.GetAll (University.API)'
+2026-07-01 21:58:59.970 +03:00 [INF] Source:[::1] Request: GET https localhost:7045/api/Course   Responded with [200] in 25ms
+2026-07-01 21:58:59.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7045/api/Course - 200 205 application/json 25.6357ms
+2026-07-01 21:59:22.723 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7045/api/Course - application/json 136
+2026-07-01 21:59:22.725 +03:00 [INF] Executing endpoint 'University.API.Controllers.CourseController.Create (University.API)'
+2026-07-01 21:59:22.728 +03:00 [INF] Route matched with {action = "Create", controller = "Course"}. Executing controller action with signature AutoWrapper.Wrappers.ApiResponse Create(University.Core.Forms.CreateCourseFrom) on controller University.API.Controllers.CourseController (University.API).
+2026-07-01 21:59:22.735 +03:00 [INF] Attempting to create new course with Name: API Endpoints
+2026-07-01 21:59:22.760 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CourseName], [EndDate], [StartDate], [Weight])
+OUTPUT INSERTED.[CourseId]
+VALUES (@p0, @p1, @p2, @p3);
+2026-07-01 21:59:22.763 +03:00 [INF] Successfully created course with ID: 2, Name: API Endpoints
+2026-07-01 21:59:22.763 +03:00 [INF] Executing ObjectResult, writing value of type 'AutoWrapper.Wrappers.ApiResponse'.
+2026-07-01 21:59:22.763 +03:00 [INF] Executed action University.API.Controllers.CourseController.Create (University.API) in 35.608ms
+2026-07-01 21:59:22.763 +03:00 [INF] Executed endpoint 'University.API.Controllers.CourseController.Create (University.API)'
+2026-07-01 21:59:22.764 +03:00 [INF] Source:[::1] Request: POST https localhost:7045/api/Course  {
+  "courseName": "API Endpoints",
+  "startDate": "2026-07-01T18:59:04.482Z",
+  "endDate": "2026-07-01T18:59:04.482Z",
+  "weight": 100
+} Responded with [200] in 40ms
+2026-07-01 21:59:22.764 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7045/api/Course - 200 238 application/json 40.813ms

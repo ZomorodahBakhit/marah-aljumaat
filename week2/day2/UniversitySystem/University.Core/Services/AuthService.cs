@@ -46,6 +46,7 @@ namespace University.Core.Services
             var user = new User
             {
                 Email = form.Email,
+                UserName = form.Email,
                 FirstName = form.FirstName,
                 LastName = form.LastName
             };

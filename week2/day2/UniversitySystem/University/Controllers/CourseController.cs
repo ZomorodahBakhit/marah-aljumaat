@@ -1,4 +1,5 @@
 ﻿using AutoWrapper.Wrappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using University.Api.Filters;
 using University.Core.DTOs;
@@ -8,6 +9,7 @@ using University.Core.Services;
 
 namespace University.API.Controllers
 {
+    
     [ApiController]
     [TypeFilter(typeof(ApiExceptionFilter))]
     [Route("api/[controller]")]
@@ -19,7 +21,7 @@ namespace University.API.Controllers
         {
             _service = courseService;
         }
-
+        [Authorize(Roles = "Teacher")]
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CourseDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -29,7 +31,7 @@ namespace University.API.Controllers
             var course = _service.GetById(id); 
             return new ApiResponse(course);
         }
-
+        [Authorize(Roles = "Teacher")]
         [HttpGet]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -37,7 +39,7 @@ namespace University.API.Controllers
         {
             return new ApiResponse(_service.GetAll());
         }
-
+        [Authorize(Roles = "Teacher")]
         [HttpPost]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -47,7 +49,7 @@ namespace University.API.Controllers
             _service.Create(form); 
             return new ApiResponse("Course created successfully");
         }
-
+        [Authorize(Roles = "Teacher")]
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -58,7 +60,7 @@ namespace University.API.Controllers
             _service.Update(id, form); 
             return new ApiResponse("Course updated successfully");
         }
-
+        [Authorize(Roles = "Teacher")]
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
