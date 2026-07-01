@@ -27,7 +27,7 @@ namespace University.Data.Configurations
             builder.Property(s => s.StudentEmail)
                 .IsRequired()
                 .HasMaxLength(150);
-                builder.HasIndex(s=>s.StudentEmail).IsUnique();
+            builder.HasIndex(s=>s.StudentEmail).IsUnique();
         }
     }
 }
