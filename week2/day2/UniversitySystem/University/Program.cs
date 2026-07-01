@@ -27,6 +27,8 @@ builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<UniversityDbContext>()
     .AddDefaultTokenProviders();
 
+
+
 // Autofac
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(container =>
